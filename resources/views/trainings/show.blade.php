@@ -4,6 +4,10 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10">
+				<div align="right">
+					<a href="{{ url('trainings/create') }}">Insert </a> ||
+					<a href="{{ url('trainings') }}">Listing for Update/Delete</a>
+				</div>
 			@if (session('success'))
 				<div class="alert alert-success">
 					{{ session('success') }}
@@ -17,12 +21,10 @@
 					<img class="card-img-top" 
 					src="{{url('storage/uploads/'.$training->filename)}}" 
 					alt="{{$training->filename}}">
+					<a href="{{url('storage/uploads/'.$training->filename)}}"> Download poster </a>
+					<br>
+					<br>
 
-					<br>
-					<a href="{{url('storage/uploads/'.$training->filename)}}" target="_blank">
-						Download poster </a>
-					<br>
-					<br>
 					
 					Training name <br>
 					<h3> {{$training->trainingname}} </h3>
@@ -35,24 +37,7 @@
 					<strong> {{$training->trainer}}</strong>
 					<br><br>
 					
-					<hr>
-					
-					<h3>Self-registration Form</h3>
-					
-                    <form method="post" action="{{url('registers')}}">
-                    @csrf
-                      <label for="trainingname">Name</label>
-                      <input type="text" class="form-control" name="name">
 
-                      <label for="desc">Matrix</label>
-                      <input type="text" class="form-control" name="matrix">
-					  
-					  <input type="hidden" class="form-control" 
-					  name="training_id" value="{{$training->id}}">
-
-                      <button type="submit" class="btn btn-primary"> 
-					  Register myself for this training</button>
-                    </form>
 
                     </div>
 

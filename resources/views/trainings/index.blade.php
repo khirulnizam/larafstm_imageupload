@@ -50,6 +50,7 @@
 							<th>Desc</th>
 							<th>Action</th>
 							<th></th>
+						  	<th></th>
 						  </tr>
 						</thead>
 						<tbody>
@@ -58,18 +59,26 @@
 							<td>{{$training['id']}}</td>
 							<td>{{$training['trainingname']}}</td>
 							<td>{{$training['desc']}}</td>
-							  <td><a href="{{action('TrainingController@edit', $training['id'])}}" class="btn btn-warning">
+							  <td>
+								  <a href="{{action('RegisterController@show',
+								$training['id'])}}" class="btn btn-info btn-sm">
+									  <i class="fa fa-file-text-o"></i>
+								  </a>
+							  </td>
+							  <td><a href="{{action('TrainingController@edit', $training['id'])}}"
+									 class="btn btn-warning btn-sm">
 									  <i class="fa fa-edit"></i>
 								  </a></td>
 							  <td>
 								  <form action="{{action('TrainingController@destroy', $training['id'])}}" method="post">
 									  @csrf
 									  <input name="_method" type="hidden" value="DELETE">
-									  <button class="btn btn-danger" type="submit">
+									  <button class="btn btn-danger btn-sm" type="submit">
 										  <i class="fa fa-remove"></i>
 									  </button>
 								  </form>
 							</td>
+
 						  </tr>
 						  @endforeach
 						<tbody>

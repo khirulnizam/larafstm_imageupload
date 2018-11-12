@@ -7,7 +7,7 @@
     @endif
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-10">
                 <div align="right">
                     <a href="{{ url('trainings/create') }}">Insert </a> ||
                     <a href="{{ url('trainings') }}">Listing for Update/Delete</a>

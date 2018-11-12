@@ -116,6 +116,10 @@ class TrainingController extends Controller
     public function show($id)
     {
         //
+        //display complete record
+        $training = Training::find($id);
+        return view('trainings.show',
+            compact('training','id'));
     }
 
     /**

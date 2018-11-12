@@ -38,11 +38,11 @@
 			      </div>
 			      <nav id="nav-menu-container">
 			        <ul class="nav-menu">
-			          <li class="menu-active"><a href="/">Home</a></li>
+			          <li class="menu-active"><a href="{{url('/')}}">Home</a></li>
 
-			          <li class="menu-has-children"><a href="">Trainings</a>
+			          <li class="menu-has-children"><a href="{{ url('registers') }}">Trainings</a>
 			            <ul>
-			              <li><a href="#">Laravel</a></li>
+			              <li><a href="{{ action('RegisterController@index', 'txtsearch=laravel') }}">Laravel</a></li>
 			              <li><a href="#">PHP&MySQL</a></li>
 							<li><a href="#">Video Filmora</a></li>
 							<li><a href="#">Java & OOP</a></li>
