@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="icon" href="{{ asset('images/fav-icon.png')}}" type="image/x-icon" />
+        <link rel="icon" href="{{ asset('fav-icon.png')}}" type="image/x-icon" />
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>{{ config('app.name', 'Laravel') }} #FSTMKUIS</title>
 
@@ -57,10 +57,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item"><a class="nav-link" href="{{ url('/')}}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Pages</a></li>
-                        <li class="nav-item"><a  href="static.html">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-                        <li class="nav-item active"><a class="nav-link" href="contact-us.html">Contact</a></li>
+                        
+                        <li class="nav-item"><a target="_blank" href="http://fstm.kuis.edu.my/blog">Blog</a></li>
+                        
+                        
                     @guest
                         <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                         <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
@@ -114,6 +114,9 @@
                 <div class="banner_text_inner">
                     <h4>FSTM KUIS Training System</h4>
                     <h5></h5>
+					<div>
+					<a class="bg_btn" target="_blank" href="http://fstm.kuis.edu.my/blog">About #fstmkuis</a>
+					</div>
                 </div>
             </div>
         </section>
@@ -145,11 +148,9 @@
                                     </span>
                                 </div>
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                    <li><a href="http://facebook.com/kuis.fstm" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="http://instagram.com/kuis.fstm" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                    
                                 </ul>
                             </aside>
                         </div>
@@ -160,9 +161,10 @@
                                 <div class="f_w_title">
                                     <h3>Contact Us</h3>
                                 </div>
-                                <a href="#">1 (800) 686-6688</a>
-                                <a href="#">info.deercreative@gmail.com</a>
-                                <p>40 Baria Sreet 133/2 <br />NewYork City, US</p>
+                                <a href="#">+60-129034614</a><br>
+                                <a href="#">Email: fstm@kuis.edu.my</a>
+                                <p>FSTM KUIS, Bandar Seri Putra, Kajang Selangor</p>
+								<p>Google Maps: <a href="http://bit.ly/mapfstm" target="_blank">bit.ly/mapfstm</a></p>
                                 <h6>Open hours: 8.00-18.00 Mon-Fri</h6>
                             </aside>
                         </div>

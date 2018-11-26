@@ -71,6 +71,7 @@ class TrainingController extends Controller
 		  
         ]);
 		
+		//in TrainingController function store()
 		//file upload management
 		
 		if($request->hasFile('filename')){			
@@ -90,22 +91,9 @@ class TrainingController extends Controller
 						'trainer'=>$trainer);
 		
 		DB::table('trainings') -> insert($data);
-		return back() ->with('success', 'Training with poster has been added');
-		
-		/*
-		$poster=$request->file('filename');
-		$extension = $poster->getClientOriginalExtension();
-		Storage::disk('public')->put($poster->getFilename().'.'.$extension,  File::get($poster));
-		$training->mime = $poster->getClientMimeType();
-		$training->original_filename = $poster->getClientOriginalName();
-		$training->filename = $poster->getFilename().'.'.$extension;
-        
-        Training::create($training);//insert record
-		*/
-		
-
-        return back()->with('success', 'Training has been added');
-    }
+		return back()->with('success', 
+		'Training with poster has been added');
+    }//end function store()
 
     /**
      * Display the specified resource.

@@ -34,7 +34,7 @@
 						<input type="file" class="form-control" name="filename">
 						<br>
 					  
-					  <button type="submit" class="btn btn-primary"> Insert to DB 
+					  <button type="submit" class="btn btn-primary"> Save new Training 
 					  </button>
                     </form>
 

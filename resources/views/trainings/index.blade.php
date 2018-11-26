@@ -7,7 +7,7 @@
 	@endif
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-md-8">
+			<div class="col-md-10">
 
 				<div align="right">
 
@@ -81,9 +81,14 @@
 
 						  </tr>
 						  @endforeach
+						  
 						<tbody>
 						</table>
+						<div class="text-right">
+						
 							{{ $trainings->links() }}
+						</div>
+							
 					</div>
 				</div>
 			</div>
