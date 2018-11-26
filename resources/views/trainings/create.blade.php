@@ -1,4 +1,4 @@
-@extends('layouts.generic')
+@extends('layouts.fancy')
 @section('content')
     @if (session('status'))
         <div class="alert alert-success">
@@ -18,7 +18,8 @@
 
                     <div class="card-body">
 
-                    <form method="post" action="{{url('trainings')}}" enctype="multipart/form-data">
+                    <form method="post" action="{{url('trainings')}}" 
+					enctype="multipart/form-data">
                     @csrf
                       <label for="trainingname">Training Name</label>
                       <input type="text" class="form-control" name="trainingname">
@@ -28,11 +29,13 @@
 
                       <label for="trainer">Trainer</label>
                       <input type="text" class="form-control" name="trainer">
+					  
                       <label for="author">Upload poster image (jpg/png)</label>
-						<input type="file" class="form-control" name="filename"/>
+						<input type="file" class="form-control" name="filename">
 						<br>
 					  
-					  <button type="submit" class="btn btn-primary"> Insert to DB </button>
+					  <button type="submit" class="btn btn-primary"> Insert to DB 
+					  </button>
                     </form>
 
                     </div>

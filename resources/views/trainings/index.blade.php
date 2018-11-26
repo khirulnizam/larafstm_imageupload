@@ -1,4 +1,4 @@
-@extends('layouts.generic')
+@extends('layouts.fancy')
 @section('content')
 	@if (session('status'))
 		<div class="alert alert-success">

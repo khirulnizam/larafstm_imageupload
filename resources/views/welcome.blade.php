@@ -1,4 +1,4 @@
-@extends('layouts.generic')
+@extends('layouts.fancy')
 
 @section('content')
     <div class="col-sm-3 col-md-9">

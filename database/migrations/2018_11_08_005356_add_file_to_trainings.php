@@ -25,7 +25,8 @@ class AddFileToTrainings extends Migration
 		
 		});
 		
-		//after adding some columns definition to store filename,run
+		//after adding some columns definition to store filename,
+		//run
 		//php artisan migrate
     }
 
